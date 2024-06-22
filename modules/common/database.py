@@ -5,7 +5,7 @@ class Database():
 
 
     def __init__(self):
-        self.connection = sqlite3.connect('/Users/dariaskoryk/Desktop/projects/Olena_QA_auto2024/Olena_QA_auto2024' + r'/become_qa_auto.db')
+        self.connection = sqlite3.connect('/Users/dariaskoryk/Desktop/projects/OlenaTitova_QA' + r'/become_qa_auto.db')
         self.cursor = self.connection.cursor()
 
 
