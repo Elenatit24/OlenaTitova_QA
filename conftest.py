@@ -30,3 +30,23 @@ def user():
 
 
     user.remove()
+
+
+@pytest.fixture
+def github_api():
+    api = GitHub()
+
+    
+    yield api
+    
+
+@pytest.fixture
+def emoji():
+    emoji = Emoji()
+    emoji.create()
+
+
+    yield user
+
+
+    emoji.remove()
