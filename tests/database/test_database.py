@@ -63,5 +63,13 @@ def test_check_user_stepan():
     assert user[0][2] == '2055'
     assert user[0][3] == 'Ukraine'
 
+    
+@pytest.mark.database
+def test_product_insert():
+    db = Database()
+    db.insert_product(5, 'сік', 'полуничний', 10)
+    water_qnt = db.select_product_qnt_by_id(5)
+    assert water_qnt[0][0] == 10
+
 
 
