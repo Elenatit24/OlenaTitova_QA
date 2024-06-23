@@ -54,8 +54,8 @@ def test_detailed_orders():
     # individual task
 
 
-    @pytest.mark.database
-def test_check_user_stepan():
+@pytest.mark.database
+def test_add_user_stepan():
     db = Database()
     user = db.get_user_address_by_name('Stepan')
     assert user[0][0] == 'Stepana Bandery str, 2'
@@ -72,4 +72,19 @@ def test_product_insert():
     assert water_qnt[0][0] == 10
 
 
+@pytest.mark.database
+def test_change_user_sergii():
+    db = Database()
+    user = db.get_user_address_by_name('Sergii')
+    assert user[0][0] == 'Shevchenko 34'
+    assert user[0][1] == 'Lviv'
+    assert user[0][2] == '2443'
+    assert user[0][3] == 'Ukraine'
 
+
+@pytest.mark.database
+def test_new_product_insert():
+    db = Database()
+    db.insert_product(6, 'Ostap', 'сік', 'яблуневий', 3)
+    water_qnt = db.select_product_qnt_by_id(6)
+    assert water_qnt[0][0] == 3
