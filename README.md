@@ -1,1 +1,2 @@
-# OlenaTitova_QA
+# Repository for QA Auto course 
+
