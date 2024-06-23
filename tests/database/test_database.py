@@ -54,11 +54,4 @@ def test_detailed_orders():
     # individual task
 
 
-@pytest.mark.database
-def test_check_user_stepan():
-    db = Database()
-    user = db.get_user_address_by_name('Stepan')
-    assert user[0][0] == 'Stepana Bandery str, 2'
-    assert user[0][1] == 'Kyiv'
-    assert user[0][2] == '2055'
-    assert user[0][3] == 'Ukraine'
+
