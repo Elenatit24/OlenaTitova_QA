@@ -51,7 +51,7 @@ def test_detailed_orders():
     assert orders[0][3] == 'з цукром'
 
 
-    # individual task
+    # individual tasks
 
 
 @pytest.mark.database

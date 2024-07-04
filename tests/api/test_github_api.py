@@ -34,7 +34,7 @@ def test_repo_with_single_char_be_found(github_api):
     assert r['total_count'] != 0
 
 
-# individual task 1
+# individual task 
 
 
 @pytest.mark.api
