@@ -6,7 +6,7 @@ from modules.common.database import Database
 def test_check_user_sergii():
     db = Database()
     user = db.get_user_address_by_name('Sergii')
-    assert user[0][0] == 'Maydan Nezalezhnosti 1'
+    assert user[0][0] == 'Maydan Nezalezhnosti 2'
     assert user[0][1] == 'Kyiv'
     assert user[0][2] == '3127'
     assert user[0][3] == 'Ukraine'
